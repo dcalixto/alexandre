@@ -11,14 +11,17 @@ gem 'rake'
 gem 'require_all'
 gem 'sqlite3'
 gem 'puma'
-gem 'shotgun'
+
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'sitemap_generator'
 gem 'pony'
 
+group :development do
 
+gem 'shotgun'
+end
 gem 'carrierwave'
 group :test do
   gem 'rspec'
