@@ -26,6 +26,30 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :welcome
   end
+  get '/premios' do
+    erb :premios
+  end
+
+  get '/contato' do
+    erb :contato
+  end
+  get '/filosofia' do
+    erb :filosofia
+  end
+
+  get '/regulamento' do
+    erb :regulamento
+  end
+  get '/condicoes' do
+    erb :condicoes
+  end
+  get '/participar' do
+    erb :participar
+  end
+
+  get '/resultados' do
+    erb :resultados
+  end
 
   post '/contact' do
     Pony.mail(
