@@ -1,6 +1,6 @@
 ENV['SINATRA_ENV'] ||= "development"
 
-
+require "sinatra/activerecord"
 require "carrierwave"
 require "carrierwave/orm/activerecord"
 require 'pagy'
