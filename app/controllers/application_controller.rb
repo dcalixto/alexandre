@@ -1,4 +1,7 @@
+
+
 require './config/environment'
+
 
 class ApplicationController < Sinatra::Base
   def authorized?
@@ -21,17 +24,22 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    set :logging, true
+    set :dump_errors, true
+
   end
 
   get '/' do
-    erb :welcome
+  @boats = Boat.all.includes(%i[ boat_attachments])
+    @houses = House.all.includes(%i[ house_attachments])
+  erb :home
   end
   get '/premios' do
     erb :premios
   end
 
   get '/contato' do
-    erb :contato
+    erb :contact2
   end
   get '/filosofia' do
     erb :filosofia
@@ -69,4 +77,8 @@ class ApplicationController < Sinatra::Base
       }
     )
   end
+
+
+
+
 end

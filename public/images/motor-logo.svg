@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:i="&amp;ns_ai;"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="-225 377 180 55"
+   enable-background="new -225 377 160 40"
+   xml:space="preserve"
+   sodipodi:docname="motors-boat-logo.svg"
+   width="180"
+   height="55"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"><metadata
+   id="metadata17"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs15" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1316"
+   inkscape:window-height="750"
+   id="namedview13"
+   showgrid="false"
+   inkscape:zoom="3.4625"
+   inkscape:cx="140.35277"
+   inkscape:cy="10.758123"
+   inkscape:window-x="50"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<switch
+   id="switch10"
+   transform="translate(0.5133299,5.0678922)">
+	<foreignObject
+   requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
+   x="0"
+   y="0"
+   width="1"
+   height="1">
+		
+	</foreignObject>
+	<g
+   i:extraneous="self"
+   id="g8"
+   transform="translate(31.385547,-12.242991)">
+		
+		
+		<path
+   fill="#2da3c6"
+   d="m -249.51942,433.13302 c 0,0 18,-13.6 53.6,-13.6 35.6,0 46.2,10.9 71.2,10.9 24.999998,0 35.099998,-13.6 35.099998,-13.6 0,0 -12.699998,20 -41.599998,20 -28.9,0 -32.3,-10 -74.9,-10 -28.8,-0.1 -43.4,6.3 -43.4,6.3 z"
+   id="path6" />
+	</g>
+</switch>
+
+<text
+   xml:space="preserve"
+   style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Volkart;-inkscape-font-specification:'Volkart, Ultra-Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;word-spacing:0px"
+   x="-223.02979"
+   y="408.83484"
+   id="text23"><tspan
+     sodipodi:role="line"
+     id="tspan21"
+     x="-223.02979"
+     y="408.83484"><tspan
+       style="fill:#ffffff"
+       id="tspan848">adm</tspan><tspan
+       style="fill:#cdab60;fill-opacity:1"
+       id="tspan850">boat</tspan></tspan></text></svg>

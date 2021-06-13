@@ -1,0 +1,643 @@
+<div class="stm_breadcrumbs_unit heading-font ">
+                <div class="container">
+                    <div class="navxtBreads">
+						<!-- Breadcrumb NavXT 6.6.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Motors Boats." href="https://motors.stylemixthemes.com/boats" class="home external" rel="nofollow"><span property="name">Motors Boats</span></a><meta property="position" content="1"></span> / <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Listings." href="https://motors.stylemixthemes.com/boats/listings/" class="post post-listings-archive external" rel="nofollow"><span property="name">Listings</span></a><meta property="position" content="2"></span> / <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Alison Jr Make archives." href="https://motors.stylemixthemes.com/boats/?taxonomy=make&amp;term=alison" class="taxonomy make external" rel="nofollow"><span property="name">Alison Jr</span></a><meta property="position" content="3"></span> / <span property="itemListElement" typeof="ListItem"><span property="name">Alison premium</span><meta property="position" content="4"></span>                    </div>
+					                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+<div class="stm-single-car-page" style="background-position: 0px 67.5px;">
+            
+            
+            <div class="container">
+                <div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-9 vc_col-md-9"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="">
+	<div class="clearfix stm-boats-single-top">
+	<div class="pull-right">
+		<!--Prices-->
+		<div class="stm-boats-single-price">
+			
+
+	
+		<div class="single-car-prices">
+			<div class="single-regular-price text-center">
+                                                            <span class="labeled">Our Price</span>
+                    					<span class="h3"><%=  @boat.price %></span>
+							</div>
+		</div>
+		
+		
+	
+			<div class="price-description-single">Included Taxes &amp; Checkup</div>
+	
+
+		</div>
+	</div>
+	<h1 class="title h2">       <%= @boat.name %>   </h1>
+</div>
+
+</div>
+<div class="stm-boats-featured-image ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+      
+
+  
+<div id="card-slider1" class="splide">
+	<div class="splide__track">
+		<ul class="splide__list">
+	
+			 <%  @boat.boat_attachments.each do |i| %>
+
+            	 <li class="splide__slide p-splide__slide"><img src="<%= i.image.url(:thumb).to_s %>" /></li>
+            	      <% end %>
+            	        
+		
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+<div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-o-shape-group vc_tta-tabs-position-top "><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1468238791430-daef11d6-cfe8" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1468238791430-daef11d6-cfe8" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Description</span></a></h4></div><div class="vc_tta-panel-body"><h3 style="font-size: 18px;text-align: left" class="vc_custom_heading vc_custom_1468321822911">Your Day on the Water just got better!</h3>
+	
+
+
+	<div class="wpb_text_column wpb_content_element  vc_custom_1468323653747">
+		<div class="wpb_wrapper">
+			<p>    <%= @boat.body %> </p>
+
+		</div>
+	</div>
+
+
+
+</div></div>
+
+
+
+
+<div class="vc_tta-panel" id="1468238791521-8e8c0611-a354" data-vc-content=".vc_tta-panel-body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% if @boat.sell == true %>
+ 
+
+<%= erb :"/boats/shared/spec.html",  :layout => false %>
+
+
+<%end%>
+
+
+
+</div><div class="vc_tta-panel" id="1468299681253-f6acfbe3-95e2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1468299681253-f6acfbe3-95e2" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Standard features</span></a></h4></div><div class="vc_tta-panel-body">
+
+
+
+
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Opcionais</h4>
+<ul class="list-style-4">
+<li>The Company offers the details</li>
+<li>Vessel in good faith but cannot</li>
+<li>Guarantee the accuracy of this</li>
+<li>The condition of the vessel</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Main Deck Master</h4>
+<ul class="list-style-4">
+<li>The Company offers the details</li>
+<li>Vessel in good faith but cannot</li>
+<li>Guarantee the accuracy of this</li>
+<li>The condition of the vessel</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Main Deck Master</h4>
+<ul class="list-style-4">
+<li>The Company offers the details</li>
+<li>Vessel in good faith but cannot</li>
+<li>Guarantee the accuracy of this</li>
+<li>The condition of the vessel</li>
+</ul>
+
+		</div>
+	</div>
+</div>
+
+
+
+</div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey vc_custom_1468325452382  vc_custom_1468325452382">
+
+</div>
+
+
+
+
+
+
+
+
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey vc_custom_1468301790685  vc_custom_1468301790685"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
+</div>
+
+
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>ELECTRONICS</h4>
+<ul class="list-style-2">
+<li>Depthsounder</li>
+<li>Plotter</li>
+<li>Log-speedometer</li>
+<li>Compass</li>
+<li>VHF</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>ELECTRONICS</h4>
+<ul class="list-style-2">
+<li>Depthsounder</li>
+<li>Plotter</li>
+<li>Log-speedometer</li>
+<li>Compass</li>
+<li>VHF</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>ELECTRONICS</h4>
+<ul class="list-style-2">
+<li>Depthsounder</li>
+<li>Plotter</li>
+<li>Log-speedometer</li>
+<li>Compass</li>
+<li>VHF</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>ELECTRONICS</h4>
+<ul class="list-style-2">
+<li>Depthsounder</li>
+<li>Plotter</li>
+<li>Log-speedometer</li>
+<li>Compass</li>
+<li>VHF</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div>
+
+
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey vc_custom_1468325452382  vc_custom_1468325452382">
+
+</div>
+
+
+<div class="vc_tta-panel" id="1468302784908-7067caa0-9ffb" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1468302784908-7067caa0-9ffb" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Videos</span></a></h4></div><div class="vc_tta-panel-body">
+
+
+<div class="boat-gallery ">
+	
+	<div class="row">
+					<div class="col-md-4 col-sm-4">
+									<a href="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_87701861_Subscription_Monthly_M-1687x1124.jpg" class="stm_fancybox external" rel="gallery nofollow">
+						<img src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_87701861_Subscription_Monthly_M-350x181.jpg" alt="Stylish wealthy couple on a luxury yacht">
+					</a>
+							</div>
+					<div class="col-md-4 col-sm-4">
+									<a href="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-1687x1125.jpg" class="stm_fancybox external" rel="gallery nofollow">
+						<img src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-350x181.jpg" alt="Lobster boat in the harbor, Maine, USA">
+					</a>
+							</div>
+					<div class="col-md-4 col-sm-4">
+									<a href="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71597957_Subscription_Monthly_XXL-1687x1124.jpg" class="stm_fancybox external" rel="gallery nofollow">
+						<img src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71597957_Subscription_Monthly_XXL-350x181.jpg" alt="Sail boat">
+					</a>
+							</div>
+			</div>
+
+</div>
+
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="vc_tta-panel" id="1468307150472-ceb2b0d5-3713" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1468307150472-ceb2b0d5-3713" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Contacts</span></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="stm-boats-contact-information">
+		<h4 class="title">Contact Information</h4>
+		<ul class="stm-list-duty heading-font">
+							<li class="widget_contacts_address">
+					<div class="icon"><i class="stm-icon-pin"></i></div>
+					<div class="text">1840 E Garvey Ave South West Covina, CA 91791</div>
+				</li>
+										<li class="widget_contacts_phone">
+					<div class="icon"><i class="stm-service-icon-sales_phone"></i></div>
+					<div class="text">
+												(888) 354-1781					</div>
+				</li>
+			
+							<li class="widget_contacts_mail">
+					<div class="icon"><i class="stm-icon-mail"></i></div>
+					<div class="text">
+												<a href="mailto:info@stylemixthemes.com">
+							info@stylemixthemes.com						</a>
+					</div>
+				</li>
+			
+							<li class="widget_contacts_hours">
+					<div class="icon"><i class="stm-service-icon-sales_hours"></i></div>
+					<div class="text">Monday – Friday: 9:00AM – 9:00PM Saturday: 9:00AM – 7:00PM Sunday: Closed</div>
+				</li>
+					</ul>
+	</div>
+
+
+<div class="stm-boat-contact-wrapper">
+			<h4>Your Contacts</h4>
+		
+<div class="stm-boat-single-contact">
+    <div class="clearfix">
+
+                    <div class="image">
+                <img class="" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2016/07/contact-1-79x79.jpg" width="79" height="79" alt="contact-1" title="contact-1">            </div>
+        
+        <div class="content">
+                            <h5>Thomas Edgerton</h5>
+            
+                            <div class="stm-content phone">
+                    <div class="inner">
+                        <i class="stm-boats-icon-phone"></i>
+                        <span>(888) 354-1781</span>
+                    </div>
+                </div>
+            
+                            <div class="stm-content mail">
+                    <div class="inner">
+                        <i class="stm-boats-icon-message"></i>
+                        <a href="mailto:t.edgerton@stylemixthemes.com">
+                            <span>t.edgerton@stylemixthemes.com</span>
+                        </a>
+                    </div>
+                </div>
+            
+                            <div class="stm-content skype">
+                    <div class="inner">
+                        <i class="stm-boats-icon-skype"></i>
+                        <a href="skype:thomas.edgerton?call">
+                            <span>thomas.edgerton</span>
+                        </a>
+                    </div>
+                </div>
+            
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class="stm-boat-single-contact">
+    <div class="clearfix">
+
+                    <div class="image">
+                <img class="" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2016/07/contact-2-79x79.jpg" width="79" height="79" alt="contact-2" title="contact-2">            </div>
+        
+        <div class="content">
+                            <h5>Loren Somerset</h5>
+            
+                            <div class="stm-content phone">
+                    <div class="inner">
+                        <i class="stm-boats-icon-phone"></i>
+                        <span>(888) 354-1781</span>
+                    </div>
+                </div>
+            
+                            <div class="stm-content mail">
+                    <div class="inner">
+                        <i class="stm-boats-icon-message"></i>
+                        <a href="mailto:l.somerset@stylemixthemes.com">
+                            <span>l.somerset@stylemixthemes.com</span>
+                        </a>
+                    </div>
+                </div>
+            
+                            <div class="stm-content skype">
+                    <div class="inner">
+                        <i class="stm-boats-icon-skype"></i>
+                        <a href="skype:loren.somerset?call">
+                            <span>loren.somerset</span>
+                        </a>
+                    </div>
+                </div>
+            
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div style="width: 100%; height: 290px; position: relative; overflow: hidden;" id="stm_map-1558560914" class="stm_gmap"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div style="overflow: hidden;"></div><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" aria-label="Map" aria-roledescription="map" role="group" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 982; transform: matrix(1, 0, 0, 1, 0, -144);"><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 982; transform: matrix(1, 0, 0, 1, 0, -144);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div></div></div><div style="width: 48px; height: 59px; overflow: hidden; position: absolute; left: -24px; top: -59px; z-index: 0;"><img alt="" src="https://motors.stylemixthemes.com/boats/wp-content/themes/pearl-child/assets/images/boats-pin.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 48px; height: 59px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div title="" tabindex="-1" style="width: 48px; height: 59px; overflow: hidden; position: absolute; cursor: pointer; touch-action: none; left: -24px; top: -59px; z-index: 0;"><img alt="" src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="width: 48px; height: 59px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe><div style="pointer-events: none; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 1000002; opacity: 0; border: 2px solid rgb(26, 115, 232);"></div></div></div></div>
+
+	<script></script>
+
+<h3 style="font-size: 18px;text-align: left" class="vc_custom_heading vc_custom_1468327092517">MESSAGE TO VENDOR</h3><div role="form" class="wpcf7" id="wpcf7-f500-p2080-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true" class="stm-hidden"></p> <ul></ul></div>
+<form action="/boats/listings/alison-premium/#wpcf7-f500-p2080-o1" method="post" class="wpcf7-form resetting" novalidate="novalidate" data-status="resetting">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="500">
+<input type="hidden" name="_wpcf7_version" value="5.4">
+<input type="hidden" name="_wpcf7_locale" value="en_US">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f500-p2080-o1">
+<input type="hidden" name="_wpcf7_container_post" value="2080">
+<input type="hidden" name="_wpcf7_posted_data_hash" value="">
+</div>
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="form-group-textarea">
+         <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false">I am interested in a price quote on this vehicle. Please contact me at your earliest convenience with your best price for this vehicle.</textarea></span>
+       </div>
+<div class="row">
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+         <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your name"></span>
+       </div>
+</div>
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+         <span class="wpcf7-form-control-wrap your-tel"><input type="tel" name="your-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Phone number"></span>
+       </div>
+</div>
+</div>
+<div class="form-group">
+         <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-mail"></span>
+       </div>
+<p>       <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" aria-invalid="false"><span class="ajax-loader"></span>
+    </p></div>
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3 vc_hidden-sm vc_hidden-xs"><div class="vc_column-inner"><div class="wpb_wrapper">
+<style></style>
+
+<div class="sidebar-area-vc stm-sidebar-mode-vc ">
+	<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="stm-boats-contact-information">
+		<h4 class="title">Contact Us</h4>
+		<ul class="stm-list-duty heading-font">
+							<li class="widget_contacts_address">
+					<div class="icon"><i class="stm-icon-pin"></i></div>
+					<div class="text">1840 E Garvey Ave South West Covina, CA 91791</div>
+				</li>
+										<li class="widget_contacts_phone">
+					<div class="icon"><i class="stm-service-icon-sales_phone"></i></div>
+					<div class="text">
+												(888) 354-1781					</div>
+				</li>
+			
+			
+							<li class="widget_contacts_hours">
+					<div class="icon"><i class="stm-service-icon-sales_hours"></i></div>
+					<div class="text">Mon – Fri: 09:00AM – 09:00PM Saturday: 09:00AM – 07:00PM Sunday: Closed</div>
+				</li>
+					</ul>
+	</div>
+
+
+<div class="stm-compact-sidebar vc_custom_1551272704862">
+    
+        
+                                            
+                    
+                    <div class="text-image" style="max-width:px;">
+                        <img class="img-responsive" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2016/07/banner-top-68x33.png">
+                    </div>
+                            
+        
+                    <div class="content">
+                <h5><span style="color: #31a3c6;">SEARAY 410 SUNDANCER</span><br>
+THOROUGHLY COVERED.</h5>
+            </div>
+        
+                    <div class="image">
+                <img class="" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2016/07/banner-bottom-247x200.jpg" width="247" height="200" alt="banner-bottom" title="banner-bottom">            </div>
+        
+
+
+        </div><div class="wpb_widgetised_column wpb_content_element">
+		<div class="wpb_wrapper">
+			
+			<aside id="stm_dealer_car_info-3" class="single-listing-car-sidebar-unit stm_dealer_car_info"><div class="stm-border-bottom-unit"><h4 class="title heading-font">BOAT LOAN CALCULATOR</h4></div></aside>
+		</div>
+	</div>
+</div></div></div></div>
+</div></div></div></div></div>
+
+                <div class="clearfix">
+                                    </div>
+            </div> <!--cont-->
+        </div>

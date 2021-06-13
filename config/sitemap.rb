@@ -7,7 +7,7 @@ require 'sitemap_generator'
 require 'carrierwave'
 require './config/initializers/carrierwave'
 
-class Article < ActiveRecord::Base
+class Boat < ActiveRecord::Base
 end
 
 SitemapGenerator::Sitemap.default_host = "http://www.mywebsite.com"
@@ -19,15 +19,14 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.create do
 
   # This part WORKS.
-  add '/index', :changefreq => 'weekly', :priority => 0.9
-  add '/team', :changefreq => 'weekly', :priority => 0.9
-  add '/services', :changefreq => 'weekly', :priority => 0.9
-  add '/blog', :changefreq => 'weekly', :priority => 0.9
+  add '/', :changefreq => 'weekly', :priority => 0.9
+  add '/boats', :changefreq => 'weekly', :priority => 0.9
+  add '/houses', :changefreq => 'weekly', :priority => 0.9
   add '/contact', :changefreq => 'weekly', :priority => 0.9
 
   # This part DOESN'T work.
-  Class::Article.find_each do |article|
-    add "/blog/#{article.url}", :lastmod => article.updated_at
+  Class::Boat.find_each do |boat|
+    add "/boat/#{boat.url}", :lastmod => boat.updated_at
   end
 
 end
