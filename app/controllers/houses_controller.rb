@@ -15,6 +15,7 @@ class HousesController < ApplicationController
 
   # GET: /houses/new
   get "/houses/new" do
+      protected!
        @house = House.new
     erb :"/houses/new.html"
   end

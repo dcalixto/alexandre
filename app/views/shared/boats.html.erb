@@ -39,9 +39,11 @@
                                 </div>
                                 <div class="listing-car-item-meta">
                                     <div class="car-meta-top heading-font clearfix">
+                                         <% if boat.sell == true %>
                                         <div class="price">
-                                            <div class="normal-price">$<%=  boat.price %></div>
+                                            <div class="normal-price">R$ <%=  boat.price %></div>
                                         </div>
+                                        <% end %>
                                         <div class="car-title"><%= boat.name %> </div>
                                     </div>
                                     <div class="car-meta-bottom">

@@ -38,7 +38,7 @@
       <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
     <![endif]-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ 
 
   <script src="/javascripts/motor.js"></script>
 
@@ -61,6 +61,15 @@ $(document).ready(function() {
     $('.select2').select2();
 });
 </script>
+
+<script>
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+});
+</script>
+
 </body>
 
 </html>

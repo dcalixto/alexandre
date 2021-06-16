@@ -205,7 +205,7 @@
 <div class="image">
     <a  href="/boats/<%= boat.id %>" class="rmv_txt_drctn external" rel="nofollow">
         <div class="image-inner">
-                                            <img  src="<%= boat.boat_attachments.first.image_url(:index).to_s%>" class="lazy img-responsive" alt="1992 Alison Jr Premium ">
+                                            <img  src="<%= boat.boat_attachments.first.image_url(:index).to_s%>" class="lazy img-responsive" alt="<%= boat.name %>">
 
             					<div class="stm-badge-directory heading-font ">
 			Special		</div>
@@ -227,12 +227,19 @@
 </div>
     <div class="content">
         <div class="meta-top">
+              <% if boat.sell == true %>
             <div class="price">
             <div class="normal-price">
-                                                        <span class="label-price">Our Price</span>
-                                        <span class="heading-font">$60 100</span>
+                                                        <span class="label-price">Preço</span>
+
+
+</br>
+
+                                        <span class="heading-font">R$ <%= boat.price %></span>
                             </div>
         </div>
+
+        <% end %>
         <div class="title heading-font">
 
 
@@ -366,109 +373,81 @@
 
 <div class="sidebar-area-vc stm-sidebar-mode-vc ">
 	<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="stm-featured-boats-widget stm-boat-side-unit clearfix ">
-			<h4 class="title">Featured Boats</h4>
+			<h4 class="title">Adicionado Recentemente</h4>
+
+
+
+
+<% if @boats != %>
+<%  @boats.last(3).each do |boat| %>
+    <a href="/boats/<%= boat.id %>" class="stm-featured-boats-w-units external" rel="nofollow">
+
+
 		
-					<a href="https://motors.stylemixthemes.com/boats/listings/alison-premium/" class="stm-featured-boats-w-units external" rel="nofollow">
-													<div class="image">
-						<img width="150" height="100" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-150x100.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-150x100.jpg 150w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-300x200.jpg 300w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-768x512.jpg 768w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-1024x683.jpg 1024w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-1687x1125.jpg 1687w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-600x400.jpg 600w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M-500x334.jpg 500w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_80097123_Subscription_Monthly_M.jpg 1688w" sizes="(max-width: 150px) 100vw, 150px">					</div>
+      
+        <img  src="<%= boat.boat_attachments.first.image_url(:small).to_s%>" class="attachment-thumbnail size-thumbnail wp-post-image" alt="<%= boat.name %>">
+
+
+				
 								<div class="content car-listing-row">
 					<div class="title heading-font">
-						1992 Alison Jr Premium 					</div>
+					<%= boat.name %>			</div>
 											<div class="price heading-font">
-							$60 100						</div>
+							R$ <%= boat.price %>						</div>
 					
 										<div class="car-meta-bottom">
 						<ul>
 																																<li>
-																					<i class="stm-boats-icon-size"></i>
+																				<li>
 										
-																					<span>99'9''</span>
-																			</li>
+																					<span><%= boat.body %></span>
+																		
 																																								<li>
-																					<i class="stm-icon-fuel"></i>
+																				
 										
 										
 											
 											
-																									<span>Hybrid</span>
 																							
 																			</li>
 																					</ul>
 					</div>
 				</div>
 			</a>
-					<a href="https://motors.stylemixthemes.com/boats/listings/alison-pk/" class="stm-featured-boats-w-units external" rel="nofollow">
-													<div class="image">
-						<img width="150" height="100" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-150x100.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-150x100.jpg 150w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-300x200.jpg 300w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-768x512.jpg 768w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-1024x682.jpg 1024w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-1687x1124.jpg 1687w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-600x400.jpg 600w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M-500x333.jpg 500w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_61269900_Subscription_Monthly_M.jpg 1688w" sizes="(max-width: 150px) 100vw, 150px">					</div>
-								<div class="content car-listing-row">
-					<div class="title heading-font">
-						2003 Alison Jr PK845l 					</div>
-											<div class="price heading-font">
-							$67 999						</div>
-					
-										<div class="car-meta-bottom">
-						<ul>
-																																<li>
-																					<i class="stm-boats-icon-size"></i>
-										
-																					<span>87'</span>
-																			</li>
-																																								<li>
-																					<i class="stm-icon-fuel"></i>
-										
-										
-											
-											
-																									<span>Hybrid</span>
-																							
-																			</li>
-																					</ul>
-					</div>
-				</div>
-			</a>
-					<a href="https://motors.stylemixthemes.com/boats/listings/baycraft-md/" class="stm-featured-boats-w-units external" rel="nofollow">
-													<div class="image">
-						<img width="150" height="100" src="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-150x100.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-150x100.jpg 150w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-300x200.jpg 300w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-768x513.jpg 768w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-1024x683.jpg 1024w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-1686x1125.jpg 1686w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M-600x400.jpg 600w, https://motors.stylemixthemes.com/boats/wp-content/uploads/sites/4/2015/12/Fotolia_71206777_Subscription_Monthly_M.jpg 1687w" sizes="(max-width: 150px) 100vw, 150px">					</div>
-								<div class="content car-listing-row">
-					<div class="title heading-font">
-						1999 Bay Craft MD878k 					</div>
-											<div class="price heading-font">
-							$325 000						</div>
-					
-										<div class="car-meta-bottom">
-						<ul>
-																																<li>
-																					<i class="stm-boats-icon-size"></i>
-										
-																					<span>90'2'</span>
-																			</li>
-																																								<li>
-																					<i class="stm-icon-fuel"></i>
-										
-										
-											
-											
-																									<span>Gas</span>
-																							
-																			</li>
-																					</ul>
-					</div>
-				</div>
-			</a>
+			<% end%>		
+                <% end%>    
 			</div>
+            </div>
 
 	<div class="stm-boats-contact-information">
-		<h4 class="title">Contact Us</h4>
+		<h4 class="title">Entre em contato</h4>
 		<ul class="stm-list-duty heading-font">
 							<li class="widget_contacts_address">
 					<div class="icon"><i class="stm-icon-pin"></i></div>
-					<div class="text">1840 E Garvey Ave South West Covina, CA 91791</div>
+					<div class="text">Rua Dr Derly Elena, 52, sala 9 - Patitiba, Paraty-RJ</div>
 				</li>
 										<li class="widget_contacts_phone">
 					<div class="icon"><i class="stm-service-icon-sales_phone"></i></div>
 					<div class="text">
-												(888) 354-1781					</div>
+												(24) 99222-3232				</div>
 				</li>
 			
 			
@@ -491,8 +470,8 @@
                             
         
                     <div class="content">
-                <h5><span style="color: #31a3c6;">SEARAY 410 SUNDANCER</span><br>
-THOROUGHLY COVERED.</h5>
+                <h5><span style="color: #31a3c6;">Azimut</span><br>
+Promoção.</h5>
             </div>
         
                     <div class="image">

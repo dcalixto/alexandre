@@ -1,0 +1,108 @@
+<div>
+
+
+
+
+<div class="container">
+  <h2>ADM</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#home">Barcos</a></li>
+    <li><a href="#menu1">Casas</a></li>
+  
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Barcos</h3>
+     	<a href="/boats/new" class="btn" rel="nofollow">Adicionar barco</a>
+
+			<table class="table table-striped table-bordered">
+
+				<thead>
+					<tr class="bg-primary text-white">
+						<th>Foto</th>
+						<th>Nome</th>
+						<th>Aluguel</th>
+						<th>Venda</th>
+						<th class="text-center">Acao</th>
+					</tr>
+				</thead>
+				<tbody>
+		
+<%  @boats.each do |boat| %>
+
+										<tr>
+
+												<td><img  src="<%= boat.boat_attachments.first.image_url(:small).to_s%>" class="attachment-stm-img-255-135 size-stm-img-255-135" alt="<%= boat.name %>" loading="lazy" ></td>
+						<td><%= boat.name %></td>
+					
+						<td><%= boat.rent %></td>
+						<td><%= boat.sell %></td>
+
+						<td align="center">
+							<a href="/boat/:id/edit" class="text-primary"><i class="fa fa-fw fa-edit"></i> Editar</a> | 
+							<a href="/boats/:id/delete" class="text-danger" onclick="return confirm('Are you sure to delete this user?');"><i class="fa fa-fw fa-trash"></i> Deletar</a>
+						</td>
+
+					</tr>
+
+					<% end %>
+					
+					
+									</tbody>
+			</table>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Casas</h3>
+    <a href="/houses/new" class="btn" rel="nofollow">Adicionar imovel</a>
+
+			<table class="table table-striped table-bordered">
+
+				<thead>
+					<tr class="bg-primary text-white">
+						<th>Foto</th>
+						<th>Nome</th>
+						<th>Aluguel</th>
+						<th>Venda</th>
+						<th class="text-center">Acao</th>
+					</tr>
+				</thead>
+				<tbody>
+		
+<%  @houses.each do |boat| %>
+
+										<tr>
+
+												<td><img  src="<%= house.house_attachments.first.image_url(:small).to_s%>" class="attachment-stm-img-255-135 size-stm-img-255-135" alt="<%= house.name %>" loading="lazy" ></td>
+						<td><%= house.name %></td>
+					
+						<td><%= house.rent %></td>
+						<td><%= house.sell %></td>
+
+						<td align="center">
+							<a href="/house/:id/edit" class="text-primary"><i class="fa fa-fw fa-edit"></i> Editar</a> | 
+							<a href="/houses/:id/delete" class="text-danger" onclick="return confirm('Are you sure to delete this user?');"><i class="fa fa-fw fa-trash"></i> Deletar</a>
+						</td>
+
+					</tr>
+
+					<% end %>
+					
+					
+									</tbody>
+			</table>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+		</div>

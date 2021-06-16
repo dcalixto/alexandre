@@ -6,36 +6,47 @@ class BoatsController < ApplicationController
   end
   # GET: /boats
   get '/boats' do
-    @boats = Boat.all.includes(%i[ boat_attachments])
+    @boats = Boat.all.includes(%i[boat_attachments])
     @pagy, @boats = pagy(Boat)
     erb :"/boats/index.html"
   end
 
   post '/new_choice' do
-  rent = params[:rent]
-  sell = params[:sell]
+    rent = params[:rent]
+    sell = params[:sell]
 
-  @boats = Boat.all(rent, sell)
-  redirect '/boats'
-end
+    @boats = Boat.all(rent, sell)
+    redirect '/boats'
+  end
 
   # GET: /boats/new
   get '/boats/new' do
+      protected!
     @boat = Boat.new
     erb :"/boats/new.html"
   end
 
   # POST: /boats
   post '/boats' do
-    @boat = Boat.create(name: params[:name], body: params[:body],  rent: params[:rent],
-                            price: params[:price],   sell: params[:sell]
-      )
+    @boat = Boat.create(name: params[:name], body: params[:body], rent: params[:rent],
+                        price: params[:price], sell: params[:sell])
+
+    params[:boat][:boat_options].each do |option|
+      boat_option = BoatOption.new(option)
+      boat_option.boat = @boat
+      boat_option.save
+    end
 
     if @boat.save
       unless params[:boat_attachments].blank?
         params[:boat_attachments]['image'].each do |a|
           @boat.boat_attachments.create!(image: a)
         end
+
+        # unless params[:boat_options].blank?
+        # params[:boat_options]['option'].each do |a|
+        #  @boat.boat_options.create!(option: a)
+        # end
 
       end
       redirect '/boats'
@@ -44,39 +55,26 @@ end
     end
   end
 
-
-   # GET: /boats/5
+  # GET: /boats/5
   get '/boats/rent' do
-  
-
-       @boats =  Boat.all.includes(%i[ boat_attachments])
+    @boats = Boat.all.includes(%i[boat_attachments])
     @pagy, @boats = pagy(Boat)
-
-
 
     erb :"/boats/rent.html"
   end
 
-    get '/boats/sell' do
-  
-
-       @boats = Boat.all
+  get '/boats/sell' do
+    @boats = Boat.all
     @pagy, @boats = pagy(Boat)
-
-
 
     erb :"/boats/sell.html"
   end
-
-
 
   # GET: /boats/5
   get '/boats/:id' do
     @boat = Boat.find(params[:id])
     erb :"/boats/show.html"
   end
-
- 
 
   # GET: /boats/5/edit
   get '/boats/:id/edit' do
@@ -87,7 +85,7 @@ end
   patch '/posts/:id' do
     @boat = Boat.find(params[:id])
 
-    if @boat.update(name: params[:name], body: params[:body],  price: params[:price])
+    if @boat.update(name: params[:name], body: params[:body], price: params[:price])
       redirect '/boats/:id'
     else
       redirect '/boats/:id'
@@ -110,5 +108,5 @@ end
       items: vars[:items] || 25
     }
   end
-      helpers MethodsPracticeHelpers
+  helpers MethodsPracticeHelpers
 end

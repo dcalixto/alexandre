@@ -11,10 +11,10 @@ default: &default
 
 development:
   <<: *default
-  #database: db/development.sqlite3
+  database: db/development.sqlite3
   adapter: sqlite3
-  encoding: unicode
-  database: development
+ # encoding: unicode
+  #database: development
   pool: 5
   #username: sample_postgres
   #password:

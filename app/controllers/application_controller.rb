@@ -1,9 +1,10 @@
-
-
 require './config/environment'
-
-
+require_relative 'helpers/methods_practice_helpers'
 class ApplicationController < Sinatra::Base
+    include Pagy::Backend
+  helpers do
+    include Pagy::Frontend
+  end
   def authorized?
     @auth ||= Rack::Auth::Basic::Request.new(request.env)
     @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == %w[teste teste]
@@ -16,9 +17,16 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/admin' do
+  get '/adm' do
     protected!
     'in secure'
+
+      @boats = Boat.all.includes(%i[boat_attachments])
+    @houses = House.all.includes(%i[house_attachments])
+        @pagy, @boats = pagy(Boat)
+  erb :"/adm/index.html"
+
+
   end
 
   configure do
@@ -26,13 +34,12 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     set :logging, true
     set :dump_errors, true
-
   end
 
   get '/' do
-  @boats = Boat.all.includes(%i[ boat_attachments])
-    @houses = House.all.includes(%i[ house_attachments])
-  erb :home
+    @boats = Boat.all.includes(%i[boat_attachments])
+    @houses = House.all.includes(%i[house_attachments])
+    erb :home
   end
   get '/premios' do
     erb :premios
@@ -79,6 +86,14 @@ class ApplicationController < Sinatra::Base
   end
 
 
+    private
 
-
+  def pagy_get_vars(collection, vars)
+    {
+      count: collection.count,
+      page: params['page'],
+      items: vars[:items] || 25
+    }
+  end
+  helpers MethodsPracticeHelpers
 end

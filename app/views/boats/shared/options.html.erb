@@ -1,0 +1,24 @@
+<div class="vc_row wpb_row vc_inner vc_row-fluid">
+	<div class="wpb_column vc_column_container vc_col-sm-3">
+		<div class="vc_column-inner">
+	<div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+
+
+
+
+			<h4>ELECTRONICS</h4>
+<ul class="list-style-2">
+
+<% if @boat.boat_options %>
+<%  @boat.boat_options.each do |o| %>
+<li><%= o.option %></li>
+<% end %>
+<% end %>
+</ul>
+
+		</div>
+	</div>
+
+</div></div></div></div>
