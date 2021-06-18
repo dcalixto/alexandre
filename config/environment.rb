@@ -5,6 +5,7 @@ require 'carrierwave'
 require 'carrierwave/orm/activerecord'
 require 'pagy'
 require 'pagy/extras/bootstrap'
+
 require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 

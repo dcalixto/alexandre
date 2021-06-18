@@ -1,7 +1,83 @@
 require './config/environment'
 require_relative 'helpers/methods_practice_helpers'
+require "easy_breadcrumbs"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#require 'sitemap_generator'
+
+
+#module Util
+#  Paths = [
+ #   '/about' => {
+ #     :priority => 0.8
+  #  },
+  #  '/boats' => {
+  #    :changefreq => 'hourly',
+ #     :priority => 0.8
+ #   },
+  #  '/houses' => {
+   #   :changefreq => 'daily',
+  #    :priority => 0.6
+  #  }
+ # ]
+
+ # def self.sitemap
+  #  SitemapGenerator::Sitemap.default_host = 'http://127.0.0.1:9292'
+  #  SitemapGenerator::Sitemap.create do
+  #    Paths.each do |path|
+  #      path.each do |k, v|
+   #       add k, v
+  #      end 
+   #   end
+   # end
+    # SitemapGenerator::Sitemap.ping_search_engines
+ # end
+#end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ApplicationController < Sinatra::Base
-    include Pagy::Backend
+  helpers Sinatra::EasyBreadcrumbs
+  include Pagy::Backend
   helpers do
     include Pagy::Frontend
   end
@@ -21,12 +97,10 @@ class ApplicationController < Sinatra::Base
     protected!
     'in secure'
 
-      @boats = Boat.all.includes(%i[boat_attachments])
+    @boats = Boat.all.includes(%i[boat_attachments])
     @houses = House.all.includes(%i[house_attachments])
-        @pagy, @boats = pagy(Boat)
-  erb :"/adm/index.html"
-
-
+    @pagy, @boats = pagy(Boat)
+    erb :"/adm/index.html"
   end
 
   configure do
@@ -41,30 +115,19 @@ class ApplicationController < Sinatra::Base
     @houses = House.all.includes(%i[house_attachments])
     erb :home
   end
-  get '/premios' do
-    erb :premios
-  end
 
   get '/contato' do
     erb :contact2
   end
-  get '/filosofia' do
-    erb :filosofia
+
+
+  get '/about' do
+    erb :about2
+  end
+  get '/survey' do
+    erb :survey
   end
 
-  get '/regulamento' do
-    erb :regulamento
-  end
-  get '/condicoes' do
-    erb :condicoes
-  end
-  get '/participar' do
-    erb :participar
-  end
-
-  get '/resultados' do
-    erb :resultados
-  end
 
   post '/contact' do
     Pony.mail(
@@ -86,7 +149,25 @@ class ApplicationController < Sinatra::Base
   end
 
 
-    private
+
+
+
+
+
+
+
+ # Util::Paths.each do |path|
+  #  path.keys.each do |p|
+  #    get p do
+    #    p
+   #   end
+   # end
+  #end
+
+
+
+
+  private
 
   def pagy_get_vars(collection, vars)
     {
@@ -97,3 +178,4 @@ class ApplicationController < Sinatra::Base
   end
   helpers MethodsPracticeHelpers
 end
+#Util.sitemap

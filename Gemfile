@@ -4,17 +4,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 gem 'activerecord', require: 'active_record'
+gem 'bcrypt'
 gem 'carrierwave'
+gem 'easy_breadcrumbs'
+gem 'pony'
+gem 'pry'
 gem 'puma'
 gem 'rake'
 gem 'require_all'
 gem 'sinatra'
 gem 'sinatra-activerecord', require: 'sinatra/activerecord'
 
-gem 'bcrypt'
-gem 'pony'
-gem 'pry'
 gem 'sitemap_generator'
+gem "sinatra-flash"
 
 gem 'pagy', '~> 3.13.0'
 
