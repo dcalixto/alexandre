@@ -48,10 +48,17 @@ class ApplicationController < Sinatra::Base
   get '/contact' do
     erb :contact
   end
+  get '/services' do
+    erb :services
+  end
 
 
   get '/about' do
     erb :about
+  end
+
+    get '/pricing' do
+    erb :pricing
   end
 
 

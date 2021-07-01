@@ -442,6 +442,9 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 #navigation.small-screen #menu-button.menu-opened:after { top: 23px; border: 0; height: 2px; width: 15px; background: #ffffff;
  -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg);
   transform: rotate(45deg); }
+
+
+  
 #navigation.small-screen #menu-button.menu-opened:before { top: 23px; background: #ffffff; width: 15px;
  -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg);
   transform: rotate(-45deg); }

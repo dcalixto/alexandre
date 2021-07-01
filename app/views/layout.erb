@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="pt-BR">
-<!--<![endif]-->
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Beauty Salon - provide the easy responsive free website templates. You can easily customize and make your own website for your startup business.">
+<meta name="keywords" content="bootstrap template, Responsive Template, Website Template, free website templates, free website template download ">
   <title>Alexandre</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<!-- Style css -->
+<link rel="stylesheet" href="/css/style.css">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/fontello.css">
+<!-- animsition css -->
+<link rel="stylesheet" type="text/css" href="/css/animsition.min.css">
+<!-- owl Carousel Css -->
+<link href="/css/owl.carousel.css" rel="stylesheet">
+<link href="/css/owl.theme.css" rel="stylesheet">
+<!-- Font css -->
+<link rel="stylesheet" href="/css/imagehover.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7cLibre+Baskerville:400,400i,700" rel="stylesheet">
+ 
 
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-
-   <link rel="stylesheet" href="/css/style.css" />
-   <link rel="stylesheet" href="/css/font-awesome.css" />
- <link rel="stylesheet" href="/css/fontello.css" />
- <link rel="stylesheet" href="/css/animsition.min.css" />
-
-
- <link rel="stylesheet" href="/css/owl.carousel.css" />
-
- <link rel="stylesheet" href="/css/owl.theme.css" />
-
- <link rel="stylesheet" href="/css/imagehover.min.css" />
-
- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7cLibre+Baskerville:400,400i,700" />
  </head>
 
 
 
 
-<body class="animsition" style="animation-duration: 1500ms; opacity: 1;">
-
+<body >
+<%= erb :header, :layout => false %>
    <%= yield %>
+
+    
+
+     <%= erb :footer, :layout => false %>
+        <%= erb :scripts, :layout => false %>
 </body>
 </html>
