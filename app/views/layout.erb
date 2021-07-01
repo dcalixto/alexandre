@@ -3,73 +3,37 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt-BR">
 <!--<![endif]-->
 
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-  <title>AdmBoat</title>
+  <title>Alexandre</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  
--->
-  <!--<link rel="stylesheet" href="/stylesheets/main.css" />-->
-  <link rel="stylesheet" href="/stylesheets/motor.css" />
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-   
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
 
+   <link rel="stylesheet" href="/css/style.css" />
+   <link rel="stylesheet" href="/css/font-awesome.css" />
+ <link rel="stylesheet" href="/css/fontello.css" />
+ <link rel="stylesheet" href="/css/animsition.min.css" />
+
+
+ <link rel="stylesheet" href="/css/owl.carousel.css" />
+
+ <link rel="stylesheet" href="/css/owl.theme.css" />
+
+ <link rel="stylesheet" href="/css/imagehover.min.css" />
+
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7cLibre+Baskerville:400,400i,700" />
  </head>
 
-<body class="page-template-default page page-id-639 theme-motors woocommerce-js stm-template-boats stm-user-not-logged-in stm-boats-default stm-layout-header-boats has-breadcrumb_navxt wpb-js-composer js-comp-ver-6.5.0 vc_responsive has_envato_iframe">
-  <div id="wrapper" style="min-height: 313px;">
-    <%= erb :header, :layout => false %>
-      <div id="main">
-        <div class="container">
-          <%= yield %>
-        </div>
-      </div>
-      <%= erb :footer, :layout => false %>
-  </div>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    [if lt IE 7]>
-      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-    <![endif]-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
 
-  <script src="/javascripts/motor.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script>
-  document.addEventListener( 'DOMContentLoaded', function () {
-    //new Splide( '.splide' ).mount();
+<body class="animsition" style="animation-duration: 1500ms; opacity: 1;">
 
-    new Splide( '#card-slider1', {
-  type  : 'fade',
-  rewind: true,
-} ).mount();
-
-  } );
-</script>
-<script>
-$(document).ready(function() {
-    $('.select2').select2();
-});
-</script>
-
-<script>
-$(document).ready(function(){
-  $(".nav-tabs a").click(function(){
-    $(this).tab('show');
-  });
-});
-</script>
-
+   <%= yield %>
 </body>
-
 </html>

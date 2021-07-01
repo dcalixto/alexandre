@@ -5,76 +5,6 @@ require "easy_breadcrumbs"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#require 'sitemap_generator'
-
-
-#module Util
-#  Paths = [
- #   '/about' => {
- #     :priority => 0.8
-  #  },
-  #  '/boats' => {
-  #    :changefreq => 'hourly',
- #     :priority => 0.8
- #   },
-  #  '/houses' => {
-   #   :changefreq => 'daily',
-  #    :priority => 0.6
-  #  }
- # ]
-
- # def self.sitemap
-  #  SitemapGenerator::Sitemap.default_host = 'http://127.0.0.1:9292'
-  #  SitemapGenerator::Sitemap.create do
-  #    Paths.each do |path|
-  #      path.each do |k, v|
-   #       add k, v
-  #      end 
-   #   end
-   # end
-    # SitemapGenerator::Sitemap.ping_search_engines
- # end
-#end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ApplicationController < Sinatra::Base
   helpers Sinatra::EasyBreadcrumbs
   include Pagy::Backend
@@ -97,9 +27,9 @@ class ApplicationController < Sinatra::Base
     protected!
     'in secure'
 
-    @boats = Boat.all.includes(%i[boat_attachments])
-    @houses = House.all.includes(%i[house_attachments])
-    @pagy, @boats = pagy(Boat)
+    @posts = Post.all.includes(%i[attachments])
+  
+    @pagy, @posts = pagy(Post)
     erb :"/adm/index.html"
   end
 
@@ -111,21 +41,17 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    @boats = Boat.all.includes(%i[boat_attachments])
-    @houses = House.all.includes(%i[house_attachments])
+   @posts = Post.all.includes(%i[attachments])
     erb :home
   end
 
-  get '/contato' do
-    erb :contact2
+  get '/contact' do
+    erb :contact
   end
 
 
   get '/about' do
-    erb :about2
-  end
-  get '/survey' do
-    erb :survey
+    erb :about
   end
 
 
@@ -153,20 +79,6 @@ class ApplicationController < Sinatra::Base
 
 
 
-
-
-
- # Util::Paths.each do |path|
-  #  path.keys.each do |p|
-  #    get p do
-    #    p
-   #   end
-   # end
-  #end
-
-
-
-
   private
 
   def pagy_get_vars(collection, vars)
@@ -178,4 +90,3 @@ class ApplicationController < Sinatra::Base
   end
   helpers MethodsPracticeHelpers
 end
-#Util.sitemap

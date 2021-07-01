@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_225415) do
+ActiveRecord::Schema.define(version: 2021_07_01_025653) do
+
+  create_table "attachments", force: :cascade do |t|
+    t.integer "post_id"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_attachments_on_post_id"
+  end
 
   create_table "boat_attachments", force: :cascade do |t|
     t.integer "boat_id"
@@ -63,6 +71,15 @@ ActiveRecord::Schema.define(version: 2021_06_15_225415) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_houses_on_name"
     t.index ["slug"], name: "index_houses_on_slug"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "titulo"
+    t.text "description"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_posts_on_slug"
   end
 
   add_foreign_key "boat_attachments", "boats"

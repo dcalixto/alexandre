@@ -8,5 +8,6 @@ require './config/environment'
 
 use Rack::MethodOverride
 run ApplicationController
+use PostsController
 use HousesController
 use BoatsController
